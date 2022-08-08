@@ -15,8 +15,8 @@ x-airflow-common:
     - ./airflow-data/airflow.cfg:/opt/airlfow/airflow.cfg
   depends_on:
     - postgres
-  networks:
-    - gcp
+  # networks:
+  #   - gcp
 
 services:
   postgres:
@@ -28,8 +28,8 @@ services:
       - POSTGRES_PORT=5432
     ports:
       - "5432:5432"
-    networks:
-      - gcp
+    # networks:
+    #   - gcp
 
   airflow-init:
     << : *airflow-common
@@ -46,8 +46,8 @@ services:
           --firstname airflow
           --lastname airflow )
     restart: on-failure
-    networks:
-      - gcp
+    # networks:
+    #   - gcp
 
   airflow-webserver:
     << : *airflow-common
@@ -56,16 +56,16 @@ services:
       - 10002:8080
     container_name: airflow_webserver
     restart: always
-    networks:
-      - gcp
+    # networks:
+    #   - gcp
 
   airflow-scheduler:
     << : *airflow-common
     command: airflow scheduler
     container_name: airflow_scheduler
     restart: always
-    networks:
-      - gcp
+    # networks:
+    #   - gcp
 
   #############################################
   #             INSTALLER KAFKA               #
