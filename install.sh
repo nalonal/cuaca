@@ -9,6 +9,8 @@ mkdir -p ~/.docker/cli-plugins/
 curl -SL https://github.com/docker/compose/releases/download/v2.5.0/docker-compose-linux-x86_64 -o ~/.docker/cli-plugins/docker-compose
 chmod +x ~/.docker/cli-plugins/docker-compose
 sudo chmod 666 /var/run/docker.sock
-docker compose up -d
 sudo apt install python3-pip
 pip3 install kafka-python
+mkdir dags airflow-data airflow-data/logs airflow-data/plugins
+sudo chmod 777 airflow-data/
+sudo chmod 777 dags/
