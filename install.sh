@@ -12,5 +12,5 @@ sudo chmod 666 /var/run/docker.sock
 sudo apt install python3-pip
 pip3 install kafka-python
 mkdir dags airflow-data airflow-data/logs airflow-data/plugins
-sudo chmod 777 airflow-data/
-sudo chmod 777 dags/
+sudo chmod -R 777 dags/
+sudo chmod -R 777 airflow-data/logs/
