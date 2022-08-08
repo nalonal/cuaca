@@ -10,4 +10,6 @@ sudo chmod 666 /var/run/docker.sock
 ## Terminate
 docker system prune<br>
 docker compose down --rmi all -v --remove-orphans<br>
-rm -r cuaca
+rm -r cuaca <br>
+sudo systemctl stop docker <br>
+sudo systemctl stop docker.socket
