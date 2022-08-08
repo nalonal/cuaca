@@ -192,3 +192,7 @@ services:
     restart: unless-stopped
     networks:
       - gcp
+  
+networks:
+  gcp:
+    driver: bridge
