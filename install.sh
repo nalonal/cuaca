@@ -14,3 +14,4 @@ pip3 install kafka-python
 mkdir dags airflow-data airflow-data/logs airflow-data/plugins
 sudo chmod -R 777 dags/
 sudo chmod -R 777 airflow-data/logs/
+sudo chmod -R 777 airflow-data/*
